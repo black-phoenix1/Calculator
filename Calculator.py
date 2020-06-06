@@ -5,11 +5,9 @@ import time
 import easter_egg
 import view_menu
 import help_menu
-import edit_menu
-
 
 root = Tk() #sets the root to Tk
-root.title("Calculator 0.0.1")
+root.title("Calculator 0.0.0.1")
 
 
 menubar = Menu(root)
@@ -48,11 +46,7 @@ def click(object):
 
 #Function for DEL
 def backspace(): #Delete only one character from the input display
-    number = display.get()
-    then = number[:-1]
-    display.delete(0,END)
-    display.insert(0,then)
-
+    display.delete(0,1)
 
 #Function for AC
 def AC():
@@ -121,12 +115,12 @@ button_bracket1 = Button(root, text = "(",padx =22, pady = 20, command = lambda 
 button_bracket2 = Button(root, text = ")",padx =22, pady = 20, command = lambda : click(")"))
 button_ac= Button(root, text = "AC", fg = "red",padx =15, pady = 20 , command = AC)
 button_del = Button(root, text = "DEL", fg = "red",padx =14, pady = 20 ,command = backspace)
-button_plus = Button(root, text = "+", padx =19, pady = 20, command = lambda : click('+'))
-button_minus = Button(root, text = "-", padx = 21, pady = 20, command = lambda : click("-"))
-button_divide = Button(root, text = "÷", padx = 20, pady = 20, command = lambda : click("/"))
-button_add = Button(root, text = "+", padx = 22, pady = 20, command = lambda : click("+"))
-button_multiply = Button(root, text = "×", padx = 20, pady = 20 , command = lambda :click("*"))
-button_equal = Button(root, text = "=", fg = "green", pady = 20, padx = 20, command = equal)
+button_plus = Button(root, text = "+", padx =18, pady = 20, command = lambda : click('+'))
+button_minus = Button(root, text = "-", padx = 20, pady = 20, command = lambda : click("-"))
+button_divide = Button(root, text = "/", padx = 20, pady = 20, command = lambda : click("/"))
+button_add = Button(root, text = "+", padx = 20, pady = 20, command = lambda : click("+"))
+button_multiply = Button(root, text = "*", padx = 20, pady = 20 , command = lambda :click("*"))
+button_equal = Button(root, text = "=", fg = "green", pady = 20, padx = 19, command = equal)
 #Gridding system for symbols
 button_bracket1.grid(row = 4, column = 1)
 button_bracket2.grid(row = 4, column = 2)
@@ -141,10 +135,7 @@ button_multiply.grid(row = 4, column = 3)
 button_equal.grid(row = 5, column = 3)
 
 
-
+root.resizable(width = "False", height ="False")
 view_menu.main(root, menubar)
-edit_menu.main(root, menubar)
 help_menu.main(root, menubar)
-
-root.resizable(height = "False", width = "False")
 root.mainloop() #End of the program
