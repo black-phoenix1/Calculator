@@ -7,7 +7,7 @@ class Help:
 		showinfo(title = "About calculator", message = "All-Purpose Calculator\nVersion 0.0.1\nFor more info: lucretiusbiah15@gmail.com ")
 
 	def source_code():
-		showinfo(title ="Source code", message = "This program is open source\nAnyone is free to edit and re-distribute the source code.")
+		showinfo(title ="Source code", message = r"This program is open source\nAnyone is free to edit and re-distribute the source code.\nwww.github.com\black-phoenix1\Calculator")
 
 	def help_message():
 		showinfo(title = "Calculator ", message = """This calculator is used to perform simple arithmetic operations and even complex ones.\nIt is still under development and you are sure to experience a few bugs, if that happens, kindly email me the bug and I will fix it in the next update\nCOMMON ERRORS AND SOLUTIONS
